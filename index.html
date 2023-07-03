@@ -3,36 +3,159 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>요리레시피</title>
     <link rel="stylesheet" href="./style/style.css">
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+      *{}
+      body{background-color: #F9F5EB;}
+      a{text-decoration: none;}
+      i{font-size: 2rem;color: #fff;padding-right: .2rem;}
+      h1{font-family: 'Kanit', sans-serif;}
+      ul, li{list-style: none;padding: 0;}
+      ol{
+        padding: 1rem;
+        border: 3px solid #EEE3CB;
+        border-radius: 10px;
+      }
+      ol li{
+        color:#361500;
+        font-weight: 600;
+        border-bottom: 1px solid #F8EAD8;
+        padding: .3rem 0;
+      }
+      ol li:last-child{border-bottom: 0;}
+      table{  
+        width: 50%;
+        color: #333;
+        font-weight: 600;
+        border-radius: 20px 20px 0 0;
+      }
+      table thead th{
+        background-color: #D4B499;
+        color: #fff;
+        padding: .7rem;
+        border-radius: 20px 0 0 0;
+      }
+      table thead th:nth-child(2){
+        border-radius: 0 20px 0 0 ;
+      }
+      table tbody td{
+        border-bottom: 2px solid #fff;
+        border-right: 2px solid #fff;
+        padding: .2rem;
+      }
+      table tbody td:nth-child(1){
+        border-left: 2px solid #fff;
+      }
+      .atc{
+        margin-bottom: 5rem;
+      }
+      .menu_tx_list{
+        background-color: #EAE3D2;
+        width: 80%;
+        margin: 2rem auto;
+      }
+      .menu_tx_list>li{
+        padding: .7rem 0;
+        display: block;
+        border-bottom: 1px solid #ededed;
+        padding-left: 1.2rem;
+      }
+      .menu_tx_list>li>a{
+        color: #533535;
+        font-size: 1.2rem;
+        font-weight: bold;
+        transition: all .3s;
+      }
+      .menu_tx_list>li>a:hover{
+        color: #967E76;
+      }
+      .main_tx{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color:#A9907E;
+        color:#fff;
+        padding: 1rem 0;
+        text-align: center;
+        border-radius: 20rem;
+      }
+      .menu_tx{
+        font-size: 2.2rem;
+        color:#3C2A21;
+        text-align: center;
+      }
+      .cook_list {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        font-size: 1.3rem;
+        background-color: #A97155;
+        color: #fff;
+        padding: 1rem;
+        border-radius: 20px;
+      }
+      .cook_order{
+        display: flex;
+        align-items: center;
+        background-color: #A97155;
+        font-size: 1.3rem;
+        color: #fff;
+        padding: 1rem;
+        border-radius: 20px;
+      }
+      .cook_img{margin: 0 auto;}
+      .cook_img{
+          overflow: hidden;
+          width: 70%;
+          height: 500px;
+      }
+        .cook_img img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+      }
+      .menu_info{
+        text-align: center;
+        font-weight: 600;
+        color: #361500;
+        font-size: 1.05rem;
+      }
+
+    </style>
   </head>
   <body>
     <header>
-      <h1>내가 좋아하는 요리 레시피</h1>
+      <div class="main_tx">
+        <h1><i class="xi-cookie"></i>내가 좋아하는 요리 레시피</h1>
+      </div>
       <nav>
-        <ul>
-          <li><a href="#cook01">봉골레 파스타</a></li>
-          <li><a href="#cook02">유부 초밥</a></li>
-          <li><a href="#cook03">돼지고기 김치찌개</a></li>
+        <ul class="menu_tx_list">
+          <li><a href="#cook01">&#183; 봉골레 파스타</a></li>
+          <li><a href="#cook02">&#183; 유부 초밥</a></li>
+          <li><a href="#cook03">&#183; 돼지고기 김치찌개</a></li>
         </ul>
       </nav>
     </header>
     <aside>
       <section id="cook01">
-          <article>
-            <h1>봉골레 </h1>
+          <article class="atc">
+            <h1 class="menu_tx">봉골레 파스타</h1>
             <div class="cook_img cook_img01">
-            <img src="./module-02/image/cook01.jpg" alt="봉골레 파스타 이미지">
+              <img src="./module-02/image/cook01.jpg" alt="봉골레 파스타 이미지">
             </div>
-            <p>이탈리아어로 조개를 의미하는 봉골레! 오늘은 바지락을 듬뿍 넣어 감칠맛을 살린<br>
+            <p class="menu_info">이탈리아어로 조개를 의미하는 봉골레! 오늘은 바지락을 듬뿍 넣어 감칠맛을 살린<br>
             봉골레 파스타를 만들었어요^^ 간단하지만 분위기 있는 식탁을 만들어주는 마법 같은 요리랍니다!</br>
             앞둔 주말, 봉골레 파스타로 사랑스러움을 더해보세요~
             </p>
           </article>
           <article>
-            <ins>재료 목록 :</ins>
-            
-            <table border="1" width="500">
+            <p class="cook_list"><i class="xi-list"></i> 재료 목록</p>
+            <table>
               <thead>
                 <tr>
                   <th>재료</th>
@@ -41,34 +164,34 @@
               </thead>
               <tbody>
                 <tr>
-                  <th>스파게티</th>
+                  <td>스파게티</td>
                   <td>160g</td>
                 </tr>
                 <tr>
-                  <th>마늘</th>
+                  <td>마늘</td>
                   <td>5쪽</td>
                 </tr>
                 <tr>
-                  <th>양파</th>
+                  <td>양파</td>
                   <td>1/2개</td>
                 </tr>
                 <tr>
-                  <th>이태리 파슬리</th>
+                  <td>이태리 파슬리</td>
                   <td>약간</td>
                 </tr>
                 <tr>
-                  <th>화이트와인</th>
+                  <td>화이트와인</td>
                   <td>1/3컵</td>
                 </tr>
                 <tr>
-                  <th>소금</th>
+                  <td>소금</td>
                   <td>약간</td>
                 </tr>
               </tbody>
             </table>
           </article>
           <article>
-            <h2>조리 순서 :</h2>
+            <h2 class="cook_order"><i class="xi-document"></i> 조리 순서</h2>
             <ol>
               <li>재료를 준비해주세요. 바지락은 흐르는 물에 비벼 깨끗이 씻은 후, 약간의 소금을 넣은 물에 담가 해감 해주세요.</li>
               <li>마늘은 편으로 썰고, 방울토마토는 2등분 해두고, 양파, 페페론치노, 이태리 파슬리는 굵게 다져주세요.</li>
@@ -80,17 +203,16 @@
           </article>
       </section>
       <section id="cook02">
-        <article>
-          <h1>유부초밥</h1>
+        <article class="atc">
+          <h1 class="menu_tx">유부초밥</h1>
           <div class="cook_img cook_img02">
             <img src="./module-02/image/cook02.jpg" alt="유부초밥 이미지">
           </div>
-          <p>맨날 면만 먹을 수 없으니 만들기도 간단하고~쫄깃한 식감의 유부초밥이 좋더라구요^^</p>
+          <p class="menu_info">맨날 면만 먹을 수 없으니 만들기도 간단하고~쫄깃한 식감의 유부초밥이 좋더라구요^^</p>
         </article>
         <article>
-            <ins>재료 목록 :</ins>
-            
-            <table border="1" width="500">
+            <p class="cook_list"><i class="xi-list"></i> 재료 목록</p>
+            <table>
               <thead>
                 <tr>
                   <th>재료</th>
@@ -99,30 +221,30 @@
               </thead>
               <tbody>
                 <tr>
-                  <th>당근</th>
+                  <td>당근</td>
                   <td>1/3개</td>
                 </tr>
                 <tr>
-                  <th>꺠</th>
+                  <td>깨</td>
                   <td>1스푼</td>
                 </tr>
                 <tr>
-                  <th>피망</th>
+                  <td>피망</td>
                   <td>1개</td>
                 </tr>
                 <tr>
-                  <th>스팸</th>
+                  <td>스팸</td>
                   <td>1/2개</td>
                 </tr>
                 <tr>
-                  <th>밥</th>
+                  <td>밥</td>
                   <td>330g</td>
                 </tr>
               </tbody>
             </table>
         </article>
         <article>
-            <h2>조리 순서 :</h2>
+            <h2 class="cook_order"><i class="xi-document"></i> 조리 순서</h2>
             <ol>
               <li>당근1/3개를 아주잘게 다져서 준비합니다.</li>
               <li>그리고 스팸1/2개를 준비해서 당근처럼 잘게 다져서 준비해주세요.</li>
@@ -132,23 +254,23 @@
                 당근과 피망은 생으로도 먹는 채소니까~ 안익혀 주어도 괜찮아요^^</li>
               <li>유부를 체에 걸러서 물기를 제거해줍니다.
                 여기서 담백한 유부초밥을 좋아하시는 분들은 유부피를 살짝 짜서 드시면 담백하게 드실수 있어요.</li>
-              <li>갓지은 밥 330G을 준비해줍니다. 저같은 경우에는 밥을 2공기정도 준비했어요.</li>
+              <li>갓지은 밥 330g을 준비해줍니다. 저같은 경우에는 밥을 2공기정도 준비했어요.</li>
               <li>양념된 밥을 안에 넣으면 완성!</li>
             </ol>
         </article>
       </section>
 
       <section id="cook03">
-        <article>
-          <h1>감자 샐러드</h1>
+        <article class="atc">
+          <h1 class="menu_tx">감자 샐러드</h1>
           <div class="cook_img cook_img03">
             <img src="./module-02/image/cook03.jpg" alt="감자 샐러드 이미지">
           </div>
-          <p>감자샐러드 대박 간단해요</p>
+          <p class="menu_info">감자샐러드 넣은 샌드위치 먹고 싶다고 하더라구요. 잘 됐다 싶어서 얼른 만들어 주었답니다.</p>
         </article>
         <article>
-          <ins>재료 목록 :</ins>
-            <table border="1" width="500">
+          <p class="cook_list"><i class="xi-list"></i> 재료 목록</p>
+            <table>
               <thead>
                 <tr>
                   <th>재료</th>
@@ -157,42 +279,42 @@
               </thead>
               <tbody>
                 <tr>
-                  <th>당근</th>
+                  <td>당근</td>
                   <td>1/3개</td>
                 </tr>
                 <tr>
-                  <th>감자</th>
+                  <td>감자</td>
                   <td>2개</td>
                 </tr>
                 <tr>
-                  <th>계란</th>
+                  <td>계란</td>
                   <td>2개</td>
                 </tr>
                 <tr>
-                  <th>오이</th>
+                  <td>오이</td>
                   <td>1/4개</td>
                 </tr>
                 <tr>
-                  <th>맛살</th>
+                  <td>맛살</td>
                   <td>2개</td>
                 </tr>
                 <tr>
-                  <th>양파</th>
+                  <td>양파</td>
                   <td>1/2개</td>
                 </tr>
                 <tr>
-                  <th>마요네즈</th>
+                  <td>마요네즈</td>
                   <td>2큰술</td>
                 </tr>
                 <tr>
-                  <th>머스타드</th>
+                  <td>머스타드</td>
                   <td>1큰술</td>
                 </tr>
               </tbody>
             </table>
         </article>
         <article>
-          <h2>조리 순서 :</h2>
+          <h2 class="cook_order"><i class="xi-document"></i> 조리 순서</h2>
           <ol>
             <li>굵은 소금 한스푼 넣고 삶아줍니다.</li>
             <li>계란도 식초 한 숟가락 소금 한 스푼 넣고 삶아 주세요.</li>

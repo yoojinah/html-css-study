@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* :rrot {
+            --변수명 : 값;
+        } */
+      :root {
+        --main--color: #066baa;
+        --secondary-color: #34abba;
+        --default-font-size: 16px;
+      }
+      html,
+      body {
+        font-size: var(--default-font-size);
+      }
+      body {
+        background-color: var(--main--color);
+      }
+      h1 {
+        color: var(--secondary-color);
+      }
+      p {
+        color: var(--secondary-color);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lorem, ipsum dolor.</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet
+      provident quia ab labore cumque vero aliquam, facere omnis sint est
+      voluptate ratione perferendis, enim porro quos accusantium veritatis
+      dignissimos inventore.
+    </p>
+  </body>
+</html>
