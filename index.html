@@ -4,17 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>요리레시피</title>
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="/style/style.css">
 
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
       *{box-sizing: border-box;}
+      html{font-size: 100%;}
       body{background-color: #F9F5EB;}
       a{text-decoration: none;}
       i{font-size: 2rem;color: #fff;padding-right: .2rem;}
-      h1{font-family: 'Kanit', sans-serif;}
+      h1{font-family: 'GmarketSansMedium';}
+      p{font-size: 1.125rem;}
       ul, li{padding: 0;}
       ol{
         padding: 1rem 2rem;
@@ -30,7 +32,7 @@
       ol li:last-child{border-bottom: 0;}
       ol li::marker{color: #A97155;font-size: 1.1rem;}
       table{  
-        width: 80%;
+        width: 70%;
         color: #361500;
         font-weight: 600;
         border-radius: 20px 20px 0 0;
@@ -57,31 +59,9 @@
       table tbody td:nth-child(1){
         border-left: 2px solid #EEE3CB;
       }
-      .atc{
-        margin-bottom: 5rem;
-      }
-      .menu_tx_list{
-        background-color: #EAE3D2;
-        width: 80%;
-        margin: 2rem auto;
-        border-radius: 7px;
-        
-      }
-      .menu_tx_list>li{
-        padding: .7rem 0;
-        display: block;
-        border-bottom: 1px solid #ededed;
-        padding-left: 1.2rem;
-      }
-      .menu_tx_list>li>a{
-        color: #533535;
-        font-size: 1.2rem;
-        font-weight: bold;
-        transition: all .3s;
-      }
-      .menu_tx_list>li>a:hover{
-        color: #967E76;
-      }
+      .atc{margin-bottom: 3rem;}
+      .cooking{margin-bottom: 6rem;}
+      .cooking:last-child{margin-bottom: 0;}
       .main_tx{
         display: flex;
         align-items: center;
@@ -91,11 +71,34 @@
         padding: 1rem 0;
         text-align: center;
         border-radius: 20rem;
+        font-size: 1rem;
       }
       .menu_tx{
         font-size: 2.2rem;
         color:#3C2A21;
-        text-align: center;
+        text-align: center;   
+        margin-bottom: 2rem; 
+      }
+      .menu_tx_list{
+        background-color: #EAE3D2;
+        width: 80%;
+        margin: 2rem auto;
+        border-radius: 7px;
+      }
+      .menu_tx_list>li{
+        padding: .7rem 0;
+        display: block;
+        border-bottom: 1px solid #ededed;
+        padding-left: 1.2rem;
+      }
+      .menu_tx_list>li>a{
+        color: #533535;
+        font-size: 1.1rem;
+        font-weight: bold;
+        transition: all .3s;
+      }
+      .menu_tx_list>li>a:hover{
+        color: #967E76;
       }
       .cook_list{
         margin-bottom: 3rem;
@@ -122,9 +125,8 @@
       .cook_img{
         margin: 0 auto;
         border-radius: 30px;
-        border: 10px solid #ffffff9b;
         overflow: hidden;
-        max-width: 800px;
+        max-width: 1000px;
         max-height:80vh;
       }
       .cook_img img{
@@ -162,9 +164,9 @@
       </nav>
     </header>
     <aside>
-      <section id="cook01">
+      <section id= "cook01" class="cooking">
           <article class="atc">
-            <h1 class="menu_tx">봉골레 파스타</h1>
+            <h1 class="menu_tx">봉골레 파스타</h1>    
             <div class="cook_img cook_img01">
               <img src="./module-02/image/cook01.jpg" alt="봉골레 파스타 이미지">
             </div>
@@ -222,7 +224,7 @@
             </ol>
           </article>
       </section>
-      <section id="cook02">
+      <section id="cook02" class="cooking">
         <article class="atc">
           <h1 class="menu_tx">유부초밥</h1>
           <div class="cook_img cook_img02">
@@ -280,7 +282,7 @@
         </article>
       </section>
 
-      <section id="cook03">
+      <section id="cook03" class="cooking">
         <article class="atc">
           <h1 class="menu_tx">감자 샐러드</h1>
           <div class="cook_img cook_img03">
