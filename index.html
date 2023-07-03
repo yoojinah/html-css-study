@@ -10,14 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
-      *{}
+      *{box-sizing: border-box;}
       body{background-color: #F9F5EB;}
       a{text-decoration: none;}
       i{font-size: 2rem;color: #fff;padding-right: .2rem;}
       h1{font-family: 'Kanit', sans-serif;}
-      ul, li{list-style: none;padding: 0;}
+      ul, li{padding: 0;}
       ol{
-        padding: 1rem;
+        padding: 1rem 2rem;
         border: 3px solid #EEE3CB;
         border-radius: 10px;
       }
@@ -29,27 +29,32 @@
       }
       ol li:last-child{border-bottom: 0;}
       table{  
-        width: 50%;
-        color: #333;
+        width: 80%;
+        color: #361500;
         font-weight: 600;
         border-radius: 20px 20px 0 0;
+        
+        /* table태그 여백 없애기 */
+        border-collapse: collapse; 
       }
       table thead th{
-        background-color: #D4B499;
+        background-color: #c1a17f;
         color: #fff;
         padding: .7rem;
         border-radius: 20px 0 0 0;
+        border-right: 2px solid #fff;
       }
+      table thead th:last-child{border-right: 0;}
       table thead th:nth-child(2){
         border-radius: 0 20px 0 0 ;
       }
       table tbody td{
-        border-bottom: 2px solid #fff;
-        border-right: 2px solid #fff;
-        padding: .2rem;
+        border-bottom: 2px solid #EEE3CB;
+        border-right: 2px solid #EEE3CB;
+        padding: .3rem;
       }
       table tbody td:nth-child(1){
-        border-left: 2px solid #fff;
+        border-left: 2px solid #EEE3CB;
       }
       .atc{
         margin-bottom: 5rem;
@@ -58,6 +63,8 @@
         background-color: #EAE3D2;
         width: 80%;
         margin: 2rem auto;
+        border-radius: 7px;
+        
       }
       .menu_tx_list>li{
         padding: .7rem 0;
@@ -78,7 +85,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color:#A9907E;
+        background-color:#9b7051;
         color:#fff;
         padding: 1rem 0;
         text-align: center;
@@ -89,7 +96,10 @@
         color:#3C2A21;
         text-align: center;
       }
-      .cook_list {
+      .cook_list{
+        margin-bottom: 3rem;
+      }
+      .cook_list_tx {
         display: flex;
         align-items: center;
         font-weight: bold;
@@ -108,16 +118,23 @@
         padding: 1rem;
         border-radius: 20px;
       }
-      .cook_img{margin: 0 auto;}
       .cook_img{
-          overflow: hidden;
-          width: 70%;
-          height: 500px;
+        margin: 0 auto;
+        border-radius: 30px;
+        overflow: hidden;
+        max-width: 800px;
+        max-height:80vh;
       }
-        .cook_img img{
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+      .cook_img img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        text-align: center;
+      }
+      .cook_img:hover img{
+        transform: scale(1.02);
+        transition: all .3s;
       }
       .menu_info{
         text-align: center;
@@ -125,7 +142,8 @@
         color: #361500;
         font-size: 1.05rem;
       }
-
+      
+      
     </style>
   </head>
   <body>
@@ -153,8 +171,8 @@
             앞둔 주말, 봉골레 파스타로 사랑스러움을 더해보세요~
             </p>
           </article>
-          <article>
-            <p class="cook_list"><i class="xi-list"></i> 재료 목록</p>
+          <article class="cook_list">
+            <p class="cook_list_tx"><i class="xi-list"></i> 재료 목록</p>
             <table>
               <thead>
                 <tr>
@@ -210,8 +228,8 @@
           </div>
           <p class="menu_info">맨날 면만 먹을 수 없으니 만들기도 간단하고~쫄깃한 식감의 유부초밥이 좋더라구요^^</p>
         </article>
-        <article>
-            <p class="cook_list"><i class="xi-list"></i> 재료 목록</p>
+        <article class="cook_list">
+            <p class="cook_list_tx"><i class="xi-list"></i> 재료 목록</p>
             <table>
               <thead>
                 <tr>
@@ -268,8 +286,8 @@
           </div>
           <p class="menu_info">감자샐러드 넣은 샌드위치 먹고 싶다고 하더라구요. 잘 됐다 싶어서 얼른 만들어 주었답니다.</p>
         </article>
-        <article>
-          <p class="cook_list"><i class="xi-list"></i> 재료 목록</p>
+        <article class="cook_list">
+          <p class="cook_list_tx"><i class="xi-list"></i> 재료 목록</p>
             <table>
               <thead>
                 <tr>
