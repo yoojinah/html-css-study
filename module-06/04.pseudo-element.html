@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p::first-letter {
+        font-size: 3rem;
+      }
+      p::first-line {
+        color: firebrick;
+      }
+      ul {
+        list-style: none;
+      }
+
+      li::before {
+        content: "✔";
+        margin-right: 0.2rem;
+        color: green;
+      }
+
+      p::selection {
+        background-color: antiquewhite;
+        color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi velit eos
+      vel magnam facere. Quidem facilis veniam laudantium distinctio dolores,
+      quod cupiditate quasi cum possimus ab? Officia accusamus molestias eos.
+    </p>
+    <h1>할 일</h1>
+    <ul>
+      <li>html태그정리</li>
+      <li>css 연습하기</li>
+    </ul>
+  </body>
+</html>
