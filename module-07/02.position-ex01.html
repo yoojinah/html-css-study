@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        position: relative;
+      }
+      small {
+        position: absolute;
+        border: 1px solid red;
+        top: 3rem;
+        left: 10rem;
+        opacity: 0;
+        transition: all 0.3s;
+      }
+      .wrapper:hover small {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lorem, ipsum.</h1>
+    <div class="wrapper">
+      <h1>Lorem, ipsum.</h1>
+      <small>Lorem ipsum dolor sit amet.</small>
+    </div>
+  </body>
+</html>

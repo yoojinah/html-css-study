@@ -33,12 +33,14 @@
       ol li::marker{color: #A97155;font-size: 1.1rem;}
       table{  
         width: 70%;
+        height: auto;
         color: #361500;
         font-weight: 600;
-        border-radius: 20px 20px 0 0;
-        
+        table-layout: fixed;
+        /* border-style: hidden; */
         /* table태그 여백 없애기 */
         border-collapse: collapse; 
+        
       }
       table thead th{
         background-color: #c1a17f;
@@ -51,13 +53,24 @@
       table thead th:nth-child(2){
         border-radius: 0 20px 0 0 ;
       }
-      table tbody td{
-        border-bottom: 2px solid #EEE3CB;
+      table tr td:first-of-type{
+        border-left: 2px solid #EEE3CB;
         border-right: 2px solid #EEE3CB;
+        border-bottom: 2px solid #EEE3CB;
+      }
+      table tr td:last-of-type{
+        
+        border-right: 2px solid #EEE3CB;
+        border-bottom: 2px solid #EEE3CB;
+      }
+      table tbody td{
+        /* border-bottom: 2px solid #EEE3CB;
+        border-right: 2px solid #EEE3CB; */
         padding: .3rem .5rem;
       }
       table tbody td:nth-child(1){
         border-left: 2px solid #EEE3CB;
+        
       }
       .atc{margin-bottom: 3rem;}
       .cooking{margin-bottom: 6rem;}
@@ -68,7 +81,7 @@
         justify-content: center;
         background-color:#9b7051;
         color:#fff;
-        padding: 1rem 0;
+        height: 100px;
         text-align: center;
         border-radius: 20rem;
         font-size: 1rem;
@@ -77,19 +90,26 @@
         font-size: 2.2rem;
         color:#3C2A21;
         text-align: center;   
-        margin-bottom: 2rem; 
       }
-      .menu_tx_list{
-        background-color: #EAE3D2;
-        width: 80%;
-        margin: 2rem auto;
-        border-radius: 7px;
+      .nav_bar{
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 2rem;
+        border-radius: 20px;
+        position: sticky;
+        top:0rem;
+        padding: 2rem;
+        z-index: 10;
+        background-color: #EAE3D2;  
+      }
+      .menu_tx_list{ 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
       }
       .menu_tx_list>li{
-        padding: .7rem 0;
-        display: block;
-        border-bottom: 1px solid #ededed;
-        padding-left: 1.2rem;
+          list-style: none;
       }
       .menu_tx_list>li>a{
         color: #533535;
@@ -99,6 +119,7 @@
       }
       .menu_tx_list>li>a:hover{
         color: #967E76;
+        
       }
       .cook_list{
         margin-bottom: 3rem;
@@ -151,18 +172,18 @@
     </style>
   </head>
   <body>
-    <header>
       <div class="main_tx">
         <h1><i class="xi-cookie"></i>내가 좋아하는 요리 레시피</h1>
       </div>
-      <nav>
+      <!-- <div class="wrapper"> -->
+      <nav class="nav_bar">
         <ul class="menu_tx_list">
-          <li><a href="#cook01">&#183; 봉골레 파스타</a></li>
-          <li><a href="#cook02">&#183; 유부 초밥</a></li>
-          <li><a href="#cook03">&#183; 돼지고기 김치찌개</a></li>
+          <li><a href="#cook01">봉골레 파스타</a></li>
+          <li><a href="#cook02">유부 초밥</a></li>
+          <li><a href="#cook03">돼지고기 김치찌개</a></li>
         </ul>
       </nav>
-    </header>
+      <!-- </div> -->
     <aside>
       <section id= "cook01" class="cooking">
           <article class="atc">
