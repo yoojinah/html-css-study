@@ -10,29 +10,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
-      *{box-sizing: border-box;}
-      html{font-size: 100%;}
-      body{background-color: #F9F5EB;}
+      *{box-sizing: border-box;margin: 0; padding: 0;}
+      html{font-size: 16px;}
+      body{
+        background-color: #F9F5EB;
+        padding: 1rem;
+        background: center/cover no-repeat url(./image/body_bg.jpg);
+        height: 100%;
+        background-attachment: fixed;
+        font-family: 'GmarketSansMedium';
+      }
+      aside{max-width: 1200px;width: 100%;margin: 0 auto;}
+      article{margin-bottom: 10rem;}
       a{text-decoration: none;}
       i{font-size: 2rem;color: #fff;padding-right: .2rem;}
-      h1{font-family: 'GmarketSansMedium';}
+      h1{}
       p{font-size: 1.125rem;}
       ul, li{padding: 0;}
       ol{
         padding: 1rem 2rem;
         border: 3px solid #EEE3CB;
         border-radius: 10px;
+        background-color: #ffffff9b;
       }
       ol li{
         color:#361500;
         font-weight: 600;
-        border-bottom: 1px solid #F8EAD8;
+        border-bottom: 2px solid #faf0e4;
         padding: .3rem 0;
       }
       ol li:last-child{border-bottom: 0;}
       ol li::marker{color: #A97155;font-size: 1.1rem;}
       table{  
-        width: 70%;
+        width: 100%;
         height: auto;
         color: #361500;
         font-weight: 600;
@@ -40,28 +50,30 @@
         /* border-style: hidden; */
         /* table태그 여백 없애기 */
         border-collapse: collapse; 
-        
+        margin: 0 auto;
+        background-color: #ffffff9b;
+        border-radius: 20px 20px 0 0;
       }
       table thead th{
         background-color: #c1a17f;
         color: #fff;
         padding: .7rem;
         border-radius: 20px 0 0 0;
-        border-right: 2px solid #fff;
+        border-right: 2px solid #faf0e4;
+        font-size: 1.2rem;
       }
       table thead th:last-child{border-right: 0;}
       table thead th:nth-child(2){
         border-radius: 0 20px 0 0 ;
       }
       table tr td:first-of-type{
-        border-left: 2px solid #EEE3CB;
-        border-right: 2px solid #EEE3CB;
-        border-bottom: 2px solid #EEE3CB;
+        border-left: 2px solid #faf0e4;
+        border-right: 2px solid #faf0e4;
+        border-bottom: 2px solid #faf0e4;
       }
       table tr td:last-of-type{
-        
-        border-right: 2px solid #EEE3CB;
-        border-bottom: 2px solid #EEE3CB;
+        border-right: 2px solid #faf0e4;
+        border-bottom: 2px solid #faf0e4;
       }
       table tbody td{
         /* border-bottom: 2px solid #EEE3CB;
@@ -69,58 +81,91 @@
         padding: .3rem .5rem;
       }
       table tbody td:nth-child(1){
-        border-left: 2px solid #EEE3CB;
-        
+        border-left: 2px solid #faf0e4; 
       }
       .atc{margin-bottom: 3rem;}
-      .cooking{margin: 6rem 0;}
+      .cooking{margin: 5rem 0;}
       .cooking:last-child{margin-bottom: 0;}
       .main_tx{
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color:#9b7051;
+        background-color:#6d2f02;
         color:#fff;
-        height: 100px;
+        padding: 3rem 0;
         text-align: center;
         border-radius: 20rem;
         font-size: 1rem;
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+      }
+      .tx_name{
+        background-color: #ffffff9b;
+        width: 40%;
+        margin-left: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 7px solid #ffffff5b;
+        border-bottom: 0;
+        padding: 1rem 0;
+        border-radius: 50px 50px 0 0;
       }
       .menu_tx{
-        font-size: 2.2rem;
-        color:#3C2A21;
-        text-align: center;   
+        font-size: 1.7rem;
+        color:#361500;
+        margin: 0;
       }
       .nav_bar{
-        width: 90%;
+        max-width: 1200px;
+        width: 100%;
         margin: 0 auto;
         margin-top: 2rem;
-        border-radius: 20px;
+        border-radius: 10px;
         position: sticky;
-        top:0rem;
-        padding: 1rem;
+        top:0;
         z-index: 10;
-        background-color: #EAE3D2;  
-        border: 10px solid #EEE3CB;
+        padding: .7rem;
+        background-color: #ebd5bf;  
+        box-shadow: 2px 2px 10px #8888885b;
+        /* border: 10px solid #f1e9d4; */
       }
       .menu_tx_list{ 
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin: 0;
+        height: 70px;
+        border-radius: 20px;
+        
+        /* background-color: #ffffff7b; */
       }
       .menu_tx_list>li{
-          list-style: none;
+        list-style: none;
+        width: 31.5%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: #F9F5EB;
+        border-radius: 15px;
       }
+      .menu_tx_list>li:last-of-type{border-right: 0;}
       .menu_tx_list>li>a{
         color: #533535;
         font-size: 1.1rem;
         font-weight: bold;
-        transition: all .3s;
+        transition: all .3s;  
+        display: inline-block;
+        width: 100%;
+        padding: 1.3rem;
+        text-align: center;
       }
       .menu_tx_list>li>a:hover{
-        color: #967E76;
-        
+        color: #805f55;
+        font-size: 1.2rem;
       }
       .cook_list{
         margin-bottom: 3rem;
@@ -130,26 +175,27 @@
         align-items: center;
         font-weight: bold;
         font-size: 1.3rem;
-        background-color: #A97155;
+        background-color: #814c32;
         color: #fff;
-        padding: 1rem;
+        padding: 1.5rem;
         border-radius: 20px;
       }
       .cook_order{
         display: flex;
         align-items: center;
-        background-color: #A97155;
+        background-color: #814c32;
         font-size: 1.3rem;
         color: #fff;
-        padding: 1rem;
+        padding: 1.5rem;
         border-radius: 20px;
       }
       .cook_img{
         margin: 0 auto;
-        border-radius: 30px;
+        border-radius: 0 20px 20px 20px;
         overflow: hidden;
-        max-width: 1000px;
+        width: 100%;
         max-height:80vh;
+        border: 7px solid #c1a17f;
       }
       .cook_img img{
         width: 100%;
@@ -164,31 +210,63 @@
       }
       .menu_info{
         text-align: center;
-        font-weight: 600;
+        font-weight: bold;
         color: #361500;
         font-size: 1.05rem;
       }
-      
-      
+      .main_banner{
+        background: center/cover no-repeat url("./image/bg02.jpg");
+        width: 100%;
+        height: 450px;
+        margin: 1.7rem 0;
+        position: relative;
+      }
+      .bn_tx{
+        position: absolute;
+        top: 3rem;
+        left: 2rem;
+      }
+      .bn_tx h1{
+        color: #fff;
+        font-size: 2.2rem;
+        padding-bottom: 2rem;
+        border-bottom: 3px solid #ffffff8b;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .bn_tx p{font-size: 3.2rem;color: #ebd5bf;}
+      .bn_tx p strong{color: #fff;}
+      .list_bar{margin-bottom: 2rem;}
     </style>
   </head>
   <body>
-      <div class="main_tx">
-        <h1><i class="xi-cookie"></i>내가 좋아하는 요리 레시피</h1>
+    <div class="main_tx">
+      <h1><i class="xi-cookie"></i>내가 좋아하는 요리 레시피</h1>
+    </div>
+    <nav class="nav_bar">
+      <ul class="menu_tx_list">
+        <li><a href="#cook01">봉골레 파스타</a></li>
+        <li><a href="#cook02">유부 초밥</a></li>
+        <li><a href="#cook03">감자 샐러드</a></li>
+      </ul>
+    </nav>
+    <!-- <aside>
+      <div class="main_banner">
+          <div class="bn_tx">
+            <h1>제 40회 만개의 레시피 공모전</h1>
+            <p><strong>우유</strong>를 활용한 다양한<br>
+              <strong>레시피</strong>를 알려주세요
+            </p>
+          </div>
       </div>
-      <!-- <div class="wrapper"> -->
-      <nav class="nav_bar">
-        <ul class="menu_tx_list">
-          <li><a href="#cook01">봉골레 파스타</a></li>
-          <li><a href="#cook02">유부 초밥</a></li>
-          <li><a href="#cook03">감자 샐러드</a></li>
-        </ul>
-      </nav>
-      <!-- </div> -->
+    </aside> -->
     <aside>
-      <section id= "cook01" class="cooking">
+      <section id="cook01" class="cooking">
           <article class="atc">
-            <h1 class="menu_tx">봉골레 파스타</h1>    
+            <div class="tx_name">
+              <h1 class="menu_tx">봉골레 파스타</h1>  
+            </div>  
             <div class="cook_img cook_img01">
               <img src="./module-02/image/cook01.jpg" alt="봉골레 파스타 이미지">
             </div>
@@ -198,7 +276,9 @@
             </p>
           </article>
           <article class="cook_list">
-            <p class="cook_list_tx"><i class="xi-list"></i> 재료 목록</p>
+            <div class="list_bar">
+              <p class="cook_list_tx"><i class="xi-list"></i> 재료 목록</p>
+            </div>  
             <table>
               <thead>
                 <tr>
@@ -235,7 +315,9 @@
             </table>
           </article>
           <article>
-            <h2 class="cook_order"><i class="xi-document"></i> 조리 순서</h2>
+            <div class="list_bar">
+              <h2 class="cook_order"><i class="xi-document"></i> 조리 순서</h2>
+            </div>
             <ol>
               <li>재료를 준비해주세요. 바지락은 흐르는 물에 비벼 깨끗이 씻은 후, 약간의 소금을 넣은 물에 담가 해감 해주세요.</li>
               <li>마늘은 편으로 썰고, 방울토마토는 2등분 해두고, 양파, 페페론치노, 이태리 파슬리는 굵게 다져주세요.</li>
@@ -248,14 +330,18 @@
       </section>
       <section id="cook02" class="cooking">
         <article class="atc">
-          <h1 class="menu_tx">유부초밥</h1>
+          <div class="tx_name">
+            <h1 class="menu_tx">유부 초밥</h1>  
+          </div>
           <div class="cook_img cook_img02">
             <img src="./module-02/image/cook02.jpg" alt="유부초밥 이미지">
           </div>
           <p class="menu_info">맨날 면만 먹을 수 없으니 만들기도 간단하고~쫄깃한 식감의 유부초밥이 좋더라구요^^</p>
         </article>
         <article class="cook_list">
-            <p class="cook_list_tx"><i class="xi-list"></i> 재료 목록</p>
+            <div class="list_bar">
+              <p class="cook_list_tx"><i class="xi-list"></i> 재료 목록</p>
+            </div>
             <table>
               <thead>
                 <tr>
@@ -288,7 +374,9 @@
             </table>
         </article>
         <article>
-            <h2 class="cook_order"><i class="xi-document"></i> 조리 순서</h2>
+            <div class="list_bar">
+              <h2 class="cook_order"><i class="xi-document"></i> 조리 순서</h2>
+            </div>
             <ol>
               <li>당근1/3개를 아주잘게 다져서 준비합니다.</li>
               <li>그리고 스팸1/2개를 준비해서 당근처럼 잘게 다져서 준비해주세요.</li>
@@ -306,14 +394,18 @@
 
       <section id="cook03" class="cooking">
         <article class="atc">
-          <h1 class="menu_tx">감자 샐러드</h1>
+          <div class="tx_name">
+            <h1 class="menu_tx">감자 샐러드</h1>
+          </div>
           <div class="cook_img cook_img03">
             <img src="./module-02/image/cook03.jpg" alt="감자 샐러드 이미지">
           </div>
           <p class="menu_info">감자샐러드 넣은 샌드위치 먹고 싶다고 하더라구요. 잘 됐다 싶어서 얼른 만들어 주었답니다.</p>
         </article>
         <article class="cook_list">
-          <p class="cook_list_tx"><i class="xi-list"></i> 재료 목록</p>
+          <div class="list_bar">
+            <p class="cook_list_tx"><i class="xi-list"></i> 재료 목록</p>
+          </div>
             <table>
               <thead>
                 <tr>
@@ -358,7 +450,9 @@
             </table>
         </article>
         <article>
-          <h2 class="cook_order"><i class="xi-document"></i> 조리 순서</h2>
+          <div class="list_bar">
+            <h2 class="cook_order"><i class="xi-document"></i> 조리 순서</h2>
+          </div>
           <ol>
             <li>굵은 소금 한스푼 넣고 삶아줍니다.</li>
             <li>계란도 식초 한 숟가락 소금 한 스푼 넣고 삶아 주세요.</li>
