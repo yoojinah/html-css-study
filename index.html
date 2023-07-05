@@ -365,16 +365,10 @@
         .side_bar > div .sub_tx h1{font-size: 1rem;}
         .side_bar > div .sub_tx strong{font-size: 1.2rem;}
         footer > div{
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-          padding: 1rem;
+          flex-direction: column;
+        
         }
-        footer > div div{
-          grid-column-start: 1;
-          grid-column-end: 2;
-          border-right: 0;
-          border: 1px solid;
-        }
+        
         .side_bar{display: none;}
       }
 
@@ -664,32 +658,30 @@
             <img src="./image/logo6.png" alt="">
           </a>
         </div>
-        <!-- <div  class="flex_wra"> -->
-          <div>
-            <a href="/">
-              <i class="xi-forum-o"></i>
-              <p>제휴 업체수</p>
-            </a>
-          </div>
-          <div>
-            <a href="/">
-              <i class="xi-crown"></i>
-              <p>총 쉐프수</p>
-            </a>
-          </div>
-          <div>
-            <a href="/">
-              <i class="xi-message-o"></i>
-              <p>총 레시피수</p>
-            </a>
-          </div>
-          <div>
-            <a href="/">
-              <i class="xi-users-o"></i>
-              <p>총 방문자수</p>
-            </a>
-          </div>
-        <!-- </div> -->
+        <div>
+          <a href="/">
+            <i class="xi-forum-o"></i>
+            <p>제휴 업체수</p>
+          </a>
+        </div>
+        <div>
+          <a href="/">
+            <i class="xi-crown"></i>
+            <p>총 쉐프수</p>
+          </a>
+        </div>
+        <div>
+          <a href="/">
+            <i class="xi-message-o"></i>
+            <p>총 레시피수</p>
+          </a>
+        </div>
+        <div>
+          <a href="/">
+            <i class="xi-users-o"></i>
+            <p>총 방문자수</p>
+          </a>
+        </div>
       </div>
     </footer>
   </body>
