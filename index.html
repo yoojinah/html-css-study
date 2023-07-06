@@ -15,7 +15,6 @@
       html{font-size: 16px;}
       body{
         background-color: #F9F5EB;
-        
         background: center/cover no-repeat url(./image/body_bg.jpg);
         height: 100%;
         background-attachment: fixed;
@@ -25,7 +24,6 @@
       article{margin-bottom: 7rem;}
       a{text-decoration: none;}
       i{font-size: 2rem;color: #fff;padding-right: .2rem;}
-      h1{}
       p{font-size: 1.125rem;}
       ul, li{padding: 0;}
       ol{
@@ -75,12 +73,8 @@
         border-right: 2px solid #faf0e4;
         border-bottom: 2px solid #faf0e4;
       }
-      table tbody td{
-        padding: .3rem .5rem;
-      }
-      table tbody td:nth-child(1){
-        border-left: 2px solid #faf0e4; 
-      }
+      table tbody td{padding: .3rem .5rem;}
+      table tbody td:nth-child(1){border-left: 2px solid #faf0e4;}
       .atc{margin-bottom: 3rem;}
       .cooking{margin: 5rem 0;}
       .cooking:last-child{margin-bottom: 0;}
@@ -151,8 +145,7 @@
       }
       .menu_tx_list>li{
         list-style: none;
-        width: 31.5%;
-        height: 100%;
+        width: 31.5%; 
         display: flex;
         justify-content: center;
         align-items: center;
@@ -165,21 +158,19 @@
       .menu_tx_list>li>a{
         color: #533535;
         font-size: 1.2rem;
-        font-weight: bold;
-        transition: all .3s;  
-        display: inline-block;
         width: 100%;
-        padding: 1.3rem;
+        font-weight: bold;
+        transition: all .3s;
         text-align: center;
         border-radius: 15px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        transition: all .3s;
       }
-      .menu_tx_list>li>:hover{
-        font-size: 1.23rem;
-        box-shadow: 2px 2px 10px #8888889b;
-      }
-      .cook_list{
-        margin-bottom: 3rem;
-      }
+      .menu_tx_list>li:hover a{font-size: 1.23rem;}
+      .cook_list{margin-bottom: 3rem;}
       .cook_list_tx {
         display: flex;
         align-items: center;
@@ -250,9 +241,7 @@
       .bn_tx p{font-size: 3.2rem;color: #ebd5bf;}
       .bn_tx p strong{color: #fff;}
       .list_bar{margin-bottom: 2rem;}
-      #cook01{
-        position: relative;
-      }
+      #cook01{ position: relative;}
       .side_bar{
         max-width: 320px;
         width: 100%;
@@ -284,16 +273,12 @@
         opacity: 1;
         transition: all .3s;
       }
-      .side_bar > div > a:hover::after{
-        opacity: 0;
-      }
+      .side_bar > div > a:hover::after{opacity: 0;}
       .side_bar > div a{
         display: block;
         color: #fff;
       }
-      .side_bar > div a strong{
-        color: #e6ceb3;
-      }
+      .side_bar > div a strong{ color: #e6ceb3;}
       .side_bar > div .sub_tx{
         position: absolute;
         top: 3.5rem;
@@ -308,9 +293,7 @@
       .side_bar > div:nth-child(2) .sub_tx{
         text-align: right;
       }
-      .side_bar div:last-of-type{
-        border-bottom: 0;
-      }
+      .side_bar div:last-of-type{ border-bottom: 0;}
       .side_bar div img{
         width: 100%;
         object-fit: cover;
@@ -335,12 +318,8 @@
         border-right: 5px solid #ffffff5b;
         width: 100%;
       }
-      footer div:first-of-type{
-        border-right: 0;
-      }
-      footer div:last-of-type{
-        border-right: 0;
-      }
+      footer div:first-of-type{border-right: 0;}
+      footer div:last-of-type{border-right: 0;}
       footer a{
         color: #532304;
         font-weight: 600;
@@ -388,25 +367,17 @@
 
       @media (max-width: 768px) {
         html{font-size: 15px;}
-        .side_bar{
-          max-width: 280px;
-        }
-        .side_bar > div{
-          height: 120px;
-        }
+        .side_bar{max-width: 280px;}
+        .side_bar > div{height: 120px;}
         .side_bar > div .sub_tx h1{font-size: 1rem;}
         .side_bar > div .sub_tx strong{font-size: 1.2rem;}
-        footer > div{
-          flex-direction: column;
-        }
+        footer > div{flex-direction: column;}
         .side_bar{display: none;}
       }
 
       @media (max-width: 550px) {
         html{font-size: 14px;}
-        .side_bar {
-          display: none;
-        }
+        .side_bar {display: none;}
         .main_tx{margin-top: 0;}
         .main_tx h1{font-size: 2rem;}
         .nav_bar{margin-top: .7rem;}
@@ -415,9 +386,8 @@
           gap: 10px;
           margin-bottom: 7rem;
         }
-        .menu_tx_list li{
-          width: 100%;
-        }
+        .menu_tx_list>li{width: 100%;}
+        .menu_tx_list > li > a{height: 50px;}
         .tx_name{
           width: 85%;
           margin-left: 0;
