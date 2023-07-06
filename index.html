@@ -106,6 +106,9 @@
         text-align: center;
         z-index: 1;
         font-size: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       .main_tx i{font-size: 2.5rem;}
       .tx_name{
@@ -151,8 +154,7 @@
         align-items: center;
         text-align: center;
         background-color: #F9F5EB;
-        border-radius: 15px;
-        
+        border-radius: 15px;  
       }
       .menu_tx_list>li:last-of-type{border-right: 0;}
       .menu_tx_list>li>a{
@@ -377,10 +379,13 @@
 
       @media (max-width: 550px) {
         html{font-size: 14px;}
+        .cooking{margin: 2rem 0;}
         .side_bar {display: none;}
         .main_tx{margin-top: 0;}
         .main_tx h1{font-size: 2rem;}
+        .main_tx h1 i{font-size: 2rem;padding: 0;}
         .nav_bar{margin-top: .7rem;}
+        .menu_info{padding: 1rem 0;}
         .menu_tx_list{
           flex-direction: column;
           gap: 10px;
@@ -394,6 +399,10 @@
           margin: 0 auto;
         }
         .tx_name h1{font-size: 1.4rem;}
+      }
+      @media (max-width: 350px) {
+        .main_tx h1{font-size: 1.45rem;}
+        .main_tx h1 i{font-size: 2rem;padding: 0;}
       }
     </style>
   </head>
@@ -564,7 +573,6 @@
             </ol>
         </article>
       </section>
-
       <section id="cook03" class="cooking">
         <article class="atc">
           <div class="tx_name">
