@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @keyframes ani {
+        0% {
+          transform: translate(0, 0) rotate(0deg);
+          background-color: antiquewhite;
+        }
+        25% {
+          transform: translate(100px, 0) rotate(90deg);
+          background-color: aqua;
+        }
+        50% {
+          transform: translate(100px, 100px) rotate(180deg);
+          background-color: blue;
+        }
+        75% {
+          transform: translate(0, 100px) rotate(270deg);
+          background-color: red;
+        }
+        100% {
+          transform: translate(0, 0) rotate(360deg);
+          background-color: yellow;
+        }
+      }
+      @keyframes ani2 {
+        from {
+          transform: translate(0, 0);
+        }
+        to {
+          transform: translate(100px, 100px);
+        }
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: aquamarine;
+        animation: ani2 3s linear infinite alternate;
+      }
+      div:hover {
+        animation-play-state: running;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

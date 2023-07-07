@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .container {
+      /* .container {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(45%, auto));
         grid-template-rows: repeat(3, 1fr);
@@ -17,11 +17,59 @@
         border: 1px solid;
 
         height: fit-content;
+      } */
+
+      section {
+        background-color: antiquewhite;
+        max-width: 800px;
+        width: 100%;
+        border: 1px solid;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      section article {
+        border: 1px solid red;
+        flex-basis: 50%;
+      }
+      .a1 {
+        background-color: rebeccapurple;
+      }
+      .a1 div {
+        border: 1px solid;
+        height: 6rem;
+        width: 100%;
+      }
+      .a2 {
+        background-color: whitesmoke;
+        display: flex;
+        justify-content: space-between;
+      }
+      .a2 div {
+        border: 1px solid;
+      }
+      .a2 .t02 {
+        flex: 1;
+      }
+      .a2 .t03 {
+        flex: 2;
+      }
+      .a2 .t03 {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        background-color: antiquewhite;
+      }
+      .a2 .t03 > div {
+        border: 1px solid;
+        width: 49.6%;
+        height: 10rem;
       }
     </style>
   </head>
   <body>
-    <div class="container">
+    <!-- <div class="container">
       <div class="item">A</div>
       <div class="item">B</div>
       <div class="item">C</div>
@@ -31,6 +79,23 @@
       <div class="item">G</div>
       <div class="item">H</div>
       <div class="item">I</div>
-    </div>
+    </div> -->
+
+    <section>
+      <article class="a1">
+        a1</div>
+        h22</div>
+        <div class="t01">3</div>
+      </article>
+      <article class="a2">
+        <div class="t02">4</div>
+        <div class="t03">
+          <div>5</div>
+          <div>6</div>
+          <div>7</div>
+          <div>8</div>
+        </div>
+      </article>
+    </section>
   </body>
 </html>

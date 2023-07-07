@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        line-height: 2rem;
+        font-family: "Gowun Dodum", sans-serif;
+        font-family: "Noto Sans KR", sans-serif;
+        background: center/cover no-repeat
+          url(./img/istockphoto-1465053603-170667a.webp);
+        width: 100%;
+        height: 100vh;
+        background-attachment: fixed;
+      }
+      footer {
+        background-color: black;
+        color: white;
+        clear: both;
+        text-align: center;
+      }
+      header > h1 {
+        text-align: center;
+        width: 1200px;
+        margin: 0 auto;
+        background-color: #5c5242;
+        color: #ffffff;
+        width: 60.4rem;
+        font-size: 4rem;
+        border-radius: 100px;
+        padding: 4.8rem 4rem 4.8rem 4rem;
+        margin-top: 3.6rem;
+      }
+      .main_nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      .main_list {
+        list-style: none;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        justify-content: space-evenly;
+        position: fixed;
+        top: 0;
+        background-color: #6a4a29b1;
+        padding-top: 0.7rem;
+        padding-bottom: 0.6rem;
+      }
+      .main_list > li > a:hover {
+        color: #540b0e;
+      }
+      .main_list > li > a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.4rem;
+        display: inline-block;
+        width: 15rem;
+        cursor: pointer;
+      }
+      .box {
+        border: 1px solid black;
+        max-width: 1400px;
+        width: 100%;
+        margin: 0 auto;
+      }
+      .container {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        border: 2px solid red;
+      }
+      .left {
+        text-align: left;
+      }
+      .img_background {
+        /* overflow: hidden; */
+        max-width: 1200px;
+        width: 100%;
+        height: 500px;
+        margin: 0 auto;
+        border: 5px solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .img_background img {
+        width: 100%;
+        height: 100%;
+      }
+      .main_name {
+        margin-top: 3rem;
+        margin-right: 24rem;
+      }
+      .main_name > a {
+        text-align: center;
+        text-decoration: none;
+        background-color: #e9edc9b1;
+        color: #081c15;
+        font-size: 1.8rem;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        display: inline-block;
+        width: 15rem;
+        padding: 1rem 1.8rem 1rem 1rem;
+        cursor: pointer;
+      }
+      .main_name > a:hover {
+        color: #540b0e;
+      }
+      .table {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #d4a373;
+        border-collapse: collapse;
+      }
+      .main_row {
+        background-color: #d4a373;
+      }
+      .row {
+        display: flex;
+      }
+      .cell {
+        flex: 1;
+        padding: 8px;
+        border: 1px solid #ccc;
+      }
+      .list_name,
+      .cooking_order {
+        width: 100%;
+        margin: 0 auto;
+        background-color: #fed0bbb1;
+        padding: 0.6rem;
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+      aside {
+        display: flex;
+        flex-direction: column;
+        right: 0;
+        top: 18rem;
+        border: 2px solid #fec89a;
+        max-width: 280px;
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        position: fixed;
+      }
+      .aside_div {
+        flex: 1;
+      }
+      aside a img {
+        height: 100%;
+        width: 100%;
+      }
+      @media (max-width: 800px) {
+        aside {
+          display: none;
+        }
+        body,
+        article .container {
+          /* width: 100%; */
+          /* margin: 0 auto; */
+        }
+      }
+    </style>
+    <!-- <style>
+      /* div {
+        margin: 2rem;
+        height: 100px;
+        width: 100px;
+        background-color: antiquewhite;
+        transition: all 0.3s;
+      } */
+
+      aside {
+        height: 500px;
+        background-color: #333;
+      }
+      aside section {
+        border: 1px solid #fff;
+        display: flex;
+        flex-direction: column;
+        /* height: 33.3%; */
+      }
+    </style> -->
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1>내가 좋아하는 요리 레시피</h1>
+      </header>
+      <nav class="main_nav">
+        <ul class="main_list">
+          <li title="본문으로 이동"><a href="#meatpie">고기파이</a></li>
+          <li title="본문으로 이동"><a href="#papa">해물파전</a></li>
+          <li title="본문으로 이동"><a href="#appleju">사과당근주스</a></li>
+        </ul>
+      </nav>
+      <div class="box">
+        <div class="container">
+          <h2 title="상세레시피로 이동" class="main_name" id="meatpie">
+            <a href="https://www.10000recipe.com/recipe/3597794" target="_blank"
+              >고기파이</a
+            >
+          </h2>
+          <div class="img_background">
+            <img src="/image/bg.jpg" alt="meatpie" />
+          </div>
+          <p>
+            겉은 바삭! 속 안은 매콤하고 부드러워요~ 성장기 아이들에게 좋은
+            고기파이!
+          </p>
+        </div>
+      </div>
+      <h3 class="list_name">
+        <i class="xi-cart-remove"> 재료 목록</i>
+      </h3>
+      <div class="container2">
+        <div class="table">
+          <div class="main_row">
+            <div class="row">
+              <div class="cell">재료</div>
+              <div class="cell">용량</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="cell">돼지고기 안심</div>
+            <div class="cell">300g</div>
+          </div>
+          <div class="row">
+            <div class="cell">양파</div>
+            <div class="cell">1개</div>
+          </div>
+          <div class="row">
+            <div class="cell">할라피뇨</div>
+            <div class="cell">10개</div>
+          </div>
+          <div class="row">
+            <div class="cell">통조림 옥수수</div>
+            <div class="cell">6큰술</div>
+          </div>
+          <div class="row">
+            <div class="cell">표고버섯</div>
+            <div class="cell">6개</div>
+          </div>
+        </div>
+      </div>
+      <h3 class="cooking_order">
+        <i class="xi-alarm-clock-o"> 조리 순서</i>
+      </h3>
+      <div class="container3">
+        <div class="left">
+          <ol>
+            <li>
+              돼지고기 안심은 칼을 이용해서 잘게 다진 후 청주, 생강즙, 소금,
+              후춧가루로 밑간을 해 주세요.
+            </li>
+            <li>
+              양파와 표고버섯은 듬성듬성 다져 주세요. 너무 잘게 다지면 씹는
+              식감이 떨어지니 굵게 다져 주세요. <br />
+              통조림 옥수수는 물에 살짝 씻어 물기를 제거해 주시고 할라페뇨 역시
+              잘게 다져 주세요. 파프리카도 굵게 다져 주세요.
+            </li>
+            <li>
+              분량의 재료를 넣고 소스를 만들어 주세요. 한국인의 입맛에 맞게 약간
+              매콤하게 만들었습니다.
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="container">
+          <h2 title="상세레시피로 이동" class="main_name" id="papa">
+            <a
+              href="https://www.10000recipe.com/recipe/6879050"
+              target="_blank"
+            >
+              해물파전</a
+            >
+          </h2>
+          <div class="img_background">
+            <img src="/image/bg.jpg" alt="해물파전" />
+          </div>
+          <p>
+            바삭한 해물파전<br />
+            비오는 날 해물파전<br />
+            간단한 술안주 해물파전<br />
+          </p>
+        </div>
+        <h3 class="list_name">
+          <i class="xi-cart-remove"> 재료 목록</i>
+        </h3>
+        <div class="container2">
+          <div class="table">
+            <div class="main_row">
+              <div class="row">
+                <div class="cell">재료</div>
+                <div class="cell">용량</div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="cell">밀가루 혹은 부침가루</div>
+              <div class="cell">1/3bowl</div>
+            </div>
+            <div class="row">
+              <div class="cell">물</div>
+              <div class="cell">1/2컵</div>
+            </div>
+            <div class="row">
+              <div class="cell">오징어</div>
+              <div class="cell">1/2마리</div>
+            </div>
+            <div class="row">
+              <div class="cell">쪽파</div>
+              <div class="cell">1/2단</div>
+            </div>
+          </div>
+        </div>
+        <h3 class="cooking_order">
+          <i class="xi-alarm-clock-o"> 조리 순서</i>
+        </h3>
+        <div class="container3">
+          <div class="left">
+            <ol>
+              <li>
+                쪽파는 500원짜리 동전크기로 준비하고,<br />
+                흐르는 물에 뿌리부분 껍질 하나씩 벗기며 씻어주고 뿌리 끝부분
+                잘라주세요.<br />
+                물기를 채반에 걸쳐 빼주세요.
+              </li>
+              <li>물과 밀가루 또는 부침가루 비율을 1:1로 섞어주세요</li>
+              <li>
+                오징어도 1마리도 깨끗이 손질해준 뒤 원하는 크기로 잘라주세요.
+              </li>
+              <li>
+                완성된 반죽에 부추+오징어 섞어 주세요.(순서 3번에 4,5번을
+                혼합)<br />
+                팬에 식용유를 두르고 달궈지면 혼합된 반죽을 올려 강불에 나두고
+                바삭하게 부치면 완성입니다.
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="container">
+          <h2 title="상세레시피로 이동" class="main_name" id="appleju">
+            <a href="https://www.10000recipe.com/recipe/6867727" target="_blank"
+              >당근사과주스</a
+            >
+          </h2>
+          <div class="img_background">
+            <img src="/image/bg.jpg" alt="당근사과주스" />
+          </div>
+          <p>
+            미세먼지가 심한 요즘, 눈 건강도 신경쓰이시죠?<br />
+            그래서 눈 건강을 위한 당근사과주스를 가지고 왔습니다. <br />
+            건강한 눈을 위한 선택! 당근사과주스 한잔은 어떠세요?
+          </p>
+        </div>
+        <h3 class="list_name">
+          <i class="xi-cart-remove"> 재료 목록</i>
+        </h3>
+        <div class="container2">
+          <div class="table">
+            <div class="main_row">
+              <div class="row">
+                <div class="cell">재료</div>
+                <div class="cell">용량</div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="cell">당근</div>
+              <div class="cell">반개</div>
+            </div>
+            <div class="row">
+              <div class="cell">사과</div>
+              <div class="cell">1개</div>
+            </div>
+            <div class="row">
+              <div class="cell">물</div>
+              <div class="cell">3큰술</div>
+            </div>
+            <div class="row">
+              <div class="cell">레몬즙</div>
+              <div class="cell">반큰술</div>
+            </div>
+          </div>
+        </div>
+        <h3 class="cooking_order">
+          <i class="xi-alarm-clock-o"> 조리 순서</i>
+        </h3>
+        <div class="container3">
+          <div class="left">
+            <ol>
+              <li>당근과 사과의 껍질을 벗겨주시고 토막토막 잘라주세요.</li>
+              <li>
+                믹서기 통에 토막낸 당근과 사과를 담고 <br />
+                꿀과 물을 레몬즙을 취향에 맞게 부어줍니다.
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <!-- <aside>
+        <a
+          href="https://cookatmarket.com/ko/product/detail?product_id=1492"
+          target="_blank"
+          class="aside_div"
+        >
+          <img src="img/dduk.jpg" alt="구슬떡볶이" />
+        </a>
+        <a
+          href="https://cookatmarket.com/ko/product/detail?product_id=1388"
+          target="_blank"
+          class="aside_div"
+        >
+          <img src="img/king.jpg" alt="낚지볶음" />
+        </a>
+        <a
+          href="https://cookatmarket.com/ko/product/detail?product_id=1433"
+          target="_blank"
+          class="aside_div"
+        >
+          <img src="img/bbq.jpg" alt="바베큐족발" />
+        </a>
+      </aside> -->
+      <footer>
+        <p>
+          <strong>경고: 지나친 음주는 뇌졸중, 기억력 손상이나 치매</strong>를
+          유발합니다.
+        </p>
+      </footer>
+    </article>
+  </body>
+</html>

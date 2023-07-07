@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .world {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80vw;
+        height: 80vw;
+        background-color: antiquewhite;
+        gap: 0.5rem;
+
+        /* 사용자 관점 */
+        /* perspective: 400px; */
+      }
+      .card {
+        position: relative;
+        width: 100px;
+        height: 150px;
+        border-radius: 0.5rem;
+        background-color: blueviolet;
+        /* transform: rotateY(45deg); */
+      }
+      .card-side {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .card_front {
+      }
+      .card_back {
+      }
+      /* .card:nth-of-type(1) {
+        transform: perspective(100px) rotateY(45deg);
+      }
+      .card:nth-of-type(2) {
+        transform: translateZ(-50px);
+      }
+      .card:nth-of-type(3) {
+        transform: rotateY(-45deg);
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="world">
+      <div class="card">
+        <div class="card-side card_front">2</div>
+        <div class="card-sidecard_back">3</div>
+      </div>
+    </div>
+  </body>
+</html>
